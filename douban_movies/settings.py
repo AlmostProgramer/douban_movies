@@ -15,6 +15,7 @@ SPIDER_MODULES = ['douban_movies.spiders']
 NEWSPIDER_MODULE = 'douban_movies.spiders'
 
 MONGO_URL='localhost:27017'
+#要记得先新建好一个Douban数据库
 MONGO_DB='Douban'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'douban_movies (+http://www.yourdomain.com)'
@@ -55,6 +56,7 @@ DOWNLOAD_DELAY = 0.2
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'douban_movies.middlewares.DoubanMoviesDownloaderMiddleware': 543,
+    #这里记得要安装一下scrapy-fack-useragent库
     'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
 }
 
